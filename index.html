@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sweet Home</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body id="cambio-color">
+ 
+    <!-- Header con el nav y los links -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#quienes-somos">Quienes Somos</a></li>
+          <li><a href="#Propiedades">Propiedades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        
+        <li><a href="#" id="modo-nocturno"><i class="fas fa-moon"></i></a></li>
+      
+      </nav>
+    </header>
+   
+    
+    
+    <!-- Sección de Home -->
+    <section id="home">
+      <div class="contenido">
+        <img id="profileImg" src="./img/Perfil/logo.png" alt="Profile Picture">
+        <p>Encuentra la casa de tus sueños con nosotros. En Sweet Home, sabemos lo importante que es para ti encontrar el hogar perfecto, por eso nos dedicamos a brindarte el mejor servicio y asesoría para que puedas tomar la mejor decisión. Desde casas familiares hasta apartamentos para solteros, contamos con una amplia selección de propiedades para que puedas elegir la que mejor se adapte a tus necesidades y presupuesto.</h1>
+
+        <p>Además, en Sweet Home creemos que encontrar tu hogar no tiene por qué ser estresante ni abrumador. Nos encargamos de todo el proceso, desde la búsqueda de propiedades hasta el cierre de la transacción, para que puedas disfrutar de la experiencia de encontrar tu hogar más dulce con tranquilidad y confianza.</h1>
+
+      </div>
+    
+    </section>
+
+    <!-- Sección de Quienes Somos -->
+    <section id="quienes-somos">
+      <div class="contenido">
+        <h2>Quienes Somos</h2> 
+
+        <p>Somos una empresa dedicada a ayudarte a encontrar el hogar más dulce para ti y tu familia. Con más de 10 años de experiencia en el mercado inmobiliario, podemos ofrecerte el mejor servicio y asesoría para que tomes la mejor decisión.
+
+          Sweet Home es una inmobiliaria dedicada a ofrecer a nuestros clientes el mejor servicio y asesoramiento en la búsqueda y adquisición de su hogar ideal. Nos especializamos en el mercado inmobiliario y tenemos amplia experiencia en la compra, venta y alquiler de propiedades residenciales y comerciales.
+          
+          Nuestro equipo está conformado por expertos en el área inmobiliaria, con un conocimiento profundo del mercado local. Nos apasiona ayudar a nuestros clientes a encontrar el hogar de sus sueños y nos esforzamos por ofrecer un servicio personalizado y de calidad en todo momento.
+          
+          En Sweet Home, nos enorgullece nuestra reputación y la confianza que nuestros clientes depositan en nosotros. Trabajamos arduamente para mantener nuestro compromiso de honestidad, integridad y transparencia en todas nuestras transacciones.</p>   
+      </div>
+      </section>
+
+
+<!-- Sección de Propiedades con slide -->
+<section id="Propiedades">
+  
+  <h2>Propiedades</h2>
+
+  <div class="slideshow">
+   
+    <!-- carousel control buttons -->
+    <button class="slide-btn slide-btn-1" onclick="mostrarImagenCompleta(' ./img/Propiedades/home-1682316_640.jpg')"></button>
+    <button class="slide-btn slide-btn-2" onclick="mostrarImagenCompleta('./img/Propiedades/home-1738408_640.jpg')"></button>
+    <button class="slide-btn slide-btn-3" onclick="mostrarImagenCompleta('./img/Propiedades/home-2409009_640.jpg')"></button>
+    <button class="slide-btn slide-btn-4" onclick="mostrarImagenCompleta('./img/Propiedades/new-home-1745382_640.jpg')"></button>
+    <!-- carousel wrapper which contains all images -->
+    <div class="slideshow-wrapper">
+        <div class="slide">
+            <img class="slide-img"
+            id="imagen1" 
+            onclick="mostrarImagenCompleta('./img/Propiedades/home-1682316_640.jpg')"
+                src="./img/Propiedades/home-1682316_640.jpg" alt="Nordelta 1">
+        </div>
+        <div class="slide">
+            <img class="slide-img"
+            id="imagen2" 
+            onclick="mostrarImagenCompleta('./img/Propiedades/home-1738408_640.jpg')"
+            src="./img/Propiedades/home-1738408_640.jpg" alt="Haras del Sur 3">
+        </div>
+        <div class="slide">
+            <img class="slide-img"
+            id="imagen3" 
+            onclick="mostrarImagenCompleta('./img/Propiedades/home-home-2409009_640.jpg')"
+            src="./img/Propiedades/home-2409009_640.jpg" alt="La Delfina">
+        </div>
+        <div class="slide">
+            <img class="slide-img" 
+            id="imagen4" 
+            onclick="mostrarImagenCompleta('./img/Propiedades/new-home-home-1745382_640.jpg')"
+            src="./img/Propiedades/new-home-1745382_640.jpg" alt="Las Brótolas">
+        </div>
+        </div>
+
+</div>
+  
+</section>
+    </section>
+    <!-- Sección de contacto -->
+    <section id="contacto">
+      <div class="contacto-contenedor">
+        <h2>Contacto</h2>
+        <form action="./enviar_formulario.php" method="post">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo..." required>
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingresa tu dirección de correo electrónico..." required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono de contacto:</label>
+            <input type="number" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono..." required>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje..." required></textarea>
+          </div>
+          <div class="form-group">
+            <button class="btn" type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    
+    <!-- Footer con redes sociales -->
+    <footer>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+      <span class="rights">Todos los derechos reservados  | Equipo 16 Comisión 23026 Codo a Codo &copy;</span>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/chartsjs.js"></script>
+    <script src="./scripts/Project_class&functions.js"></script>
+  </body>
+</html>
