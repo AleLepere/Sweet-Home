@@ -4,7 +4,10 @@
     <title>Sweet Home</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    </head>
+    <script src="scripts/script.js"></script>  
+    <script src="scripts/validacion.js"></script>
+    
+  </head>
   <body id="cambio-color">
  
     <!-- Header con el nav y los links -->
@@ -99,27 +102,30 @@
     <section id="contacto">
       <div class="contacto-contenedor">
         <h2>Contacto</h2>
-        <form action="./enviar_formulario.php" method="post">
+        <form name="form1" onsubmit="return formValidation()">
+          <!-- <form name="formulario" id="formulario" onsubmit="return validaForm()" </form> method="post"> -->
           <div class="form-group">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo..." required>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo..." />
           </div>
           <div class="form-group">
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" placeholder="Ingresa tu dirección de correo electrónico..." required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu dirección de correo electrónico..." autocomplete="off"/>
           </div>
           <div class="form-group">
             <label for="telefono">Teléfono de contacto:</label>
-            <input type="number" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono..." required>
+            <input type="number" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono..." />
           </div>
           <div class="form-group">
             <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje..." required></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje..."></textarea>
           </div>
           <div class="form-group">
-            <button class="btn" type="submit">Enviar</button>
+            <input type="submit" id="submit" value="Enviar" name="submit" />
+            
           </div>
         </form>
+
       </div>
     </section>
     
@@ -135,8 +141,8 @@
       <span class="rights">Todos los derechos reservados  | Equipo 16 Comisión 23026 Codo a Codo &copy;</span>
     </footer>
 
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/chartsjs.js"></script>
-    <script src="./scripts/Project_class&functions.js"></script>
+    
+    <!-- <script src="./scripts/chartsjs.js"></script>
+    <script src="./scripts/Project_class&functions.js"></script> -->
   </body>
 </html>

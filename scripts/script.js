@@ -1,28 +1,28 @@
-//Modo nocturno
+// //Modo nocturno
 
-// obtener el botón "modo nocturno"
-const modoNocturno = document.getElementById("modo-nocturno");
+// // obtener el botón "modo nocturno"
+// const modoNocturno = document.getElementById("modo-nocturno");
 
-// obtener el elemento body
-const body = document.getElementById("cambio-color");
+// // obtener el elemento body
+// const body = document.getElementById("cambio-color");
 
-// obtener el estado actual del modo nocturno desde el localStorage
-const isModoNocturno = localStorage.getItem("modoNocturno") === "true";
+// // obtener el estado actual del modo nocturno desde el localStorage
+// const isModoNocturno = localStorage.getItem("modoNocturno") === "true";
 
-// actualizar la clase del body según el estado actual del modo nocturno
-body.classList.toggle("nocturno", isModoNocturno);
+// // actualizar la clase del body según el estado actual del modo nocturno
+// body.classList.toggle("nocturno", isModoNocturno);
 
-// agregar un event listener para el clic en el botón "modo nocturno"
-modoNocturno.addEventListener("click", () => {
-  // obtener el nuevo estado del modo nocturno
-  const nuevoEstado = !body.classList.contains("nocturno");
+// // agregar un event listener para el clic en el botón "modo nocturno"
+// modoNocturno.addEventListener("click", () => {
+//   // obtener el nuevo estado del modo nocturno
+//   const nuevoEstado = !body.classList.contains("nocturno");
 
-  // actualizar la clase del body según el nuevo estado del modo nocturno
-  body.classList.toggle("nocturno", nuevoEstado);
+//   // actualizar la clase del body según el nuevo estado del modo nocturno
+//   body.classList.toggle("nocturno", nuevoEstado);
 
-  // guardar el nuevo estado del modo nocturno en el localStorage
-  localStorage.setItem("modoNocturno", nuevoEstado);
-});
+//   // guardar el nuevo estado del modo nocturno en el localStorage
+//   localStorage.setItem("modoNocturno", nuevoEstado);
+// });
 
 //Mostrar imagenes en el slider
 
@@ -60,6 +60,6 @@ function mostrarImagenCompleta(imagen) {
 
 const slider = document.getElementById("my-slider");
 
-//Footer
+Footer
 const year = new Date().getFullYear();
 document.getElementById("year").innerHTML = year;
